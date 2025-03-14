@@ -1,22 +1,17 @@
 README
 
-
-Name: Hemanth Sukumar Vangala
-UTA ID: 1002118951
-
-
 Description:
 The code is a Python program that implements a Bayesian network and performs probabilistic inference using enumeration. The program takes as input a training dataset in the form of a text file containing four binary variables 'B', 'G', 'C', and 'F'. The program reads the training dataset using pandas and computes the probabilities of each variable and the joint probability distribution (JPD) of all four variables. 
 
-The program then allows the user to input a query variable and an optional set of evidence variables. If evidence variables are given, the program computes the conditional probability of the query variable given the evidence variables using the JPD and the product rule of probability.
+The program then allows users to input a query variable and an optional set of evidence variables. If evidence variables are given, the program computes the conditional probability of the query variable given the evidence variables using the JPD and the product rule of probability.
 
-The program takes command-line arguments to specify the training data file, the query variable, and the evidence variables. The program uses the sys.argv array to extract these arguments. 
+The program takes command-line arguments to specify the training data file, query, and evidence variables. The program uses the sys.argv array to extract these arguments. 
 
 The main function in the program is `bnet()`, which takes three arguments: `training_data`, `query_variables`, and `evidence_variables`. `training_data` is the path to the text file containing the training dataset. `query_variables` is a dictionary containing the query variable and its value, e.g., {'B': 'Bt'}. `evidence_variables` is an optional dictionary containing the evidence variables and their values, e.g., {'C': 'Cf', 'F': 'Ft'}.
 
 The program first reads the training dataset using pandas and computes the probabilities of each variable and the JPD of all four variables using maximum likelihood estimation. It then displays the probabilities and the JPD to the console.
 
-The program then calculates the JPD for the query variable and the evidence variables (if any) using the probabilities and the product rule of probability. If evidence variables are given, the program also calculates the JPD for the evidence variables. The program then computes the conditional probability of the query variable given the evidence variables using the JPD and the product rule of probability. The program displays the conditional probability to the console.
+The program then calculates the JPD for the query and evidence variables (if any) using the probabilities and the product rule of probability. If evidence variables are given, the program also calculates the JPD for the evidence variables. The program then computes the conditional probability of the query variable given the evidence variables using the JPD and the product rule of probability. The program displays the conditional probability to the console.
 
 Overall, the program demonstrates the implementation of a simple Bayesian network and the use of probabilistic inference for reasoning under uncertainty.
 
